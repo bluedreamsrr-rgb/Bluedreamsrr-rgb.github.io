@@ -1,0 +1,164 @@
+/* style.css for TCVP Framework */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.7;
+    color: #2c3e50;
+    background: #fafafa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 2.2em;
+    color: #1a2b3c;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.6em;
+    color: #2c3e50;
+    margin: 40px 0 20px;
+    padding-left: 8px;
+    border-left: 5px solid #4a90e2;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #34495e;
+    margin: 30px 0 15px;
+}
+
+p {
+    margin: 0 0 20px;
+    color: #4a5568;
+}
+
+a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+ul, ol {
+    margin: 0 0 25px 25px;
+    color: #4a5568;
+}
+
+li {
+    margin: 8px 0;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #e9ecef;
+    margin: 40px 0;
+}
+
+.note, .warning, .success {
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin: 30px 0;
+    font-weight: 400;
+}
+
+.note {
+    background: #f0f7ff;
+    border-left: 5px solid #4a90e2;
+}
+
+.warning {
+    background: #fff9e6;
+    border-left: 5px solid #f5a623;
+}
+
+.success {
+    background: #f0f9f0;
+    border-left: 5px solid #28a745;
+}
+
+code, pre {
+    background: #f7f9fc;
+    border-radius: 6px;
+    font-family: 'SF Mono', 'Courier New', monospace;
+    font-size: 0.95em;
+}
+
+code {
+    padding: 2px 6px;
+}
+
+pre {
+    padding: 20px;
+    overflow-x: auto;
+    border: 1px solid #e9ecef;
+    margin: 25px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+th {
+    background: #4a90e2;
+    color: white;
+    padding: 12px;
+    font-weight: 500;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+tr:hover {
+    background: #f8f9fa;
+}
+
+.footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 2px solid #e9ecef;
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.95em;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.4em;
+    }
+}
