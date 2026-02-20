@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philosophy & Theology — TCVP Evidence</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .instance {
+            margin-top: 2em;
+            padding: 1em;
+            background: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+        }
+        .instance h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .oriented {
+            border-left-color: #27ae60;
+            background: #f0f9f0;
+        }
+        .misoriented {
+            border-left-color: #e67e22;
+            background: #fef5e7;
+        }
+        .structural {
+            border-left-color: #7f8c8d;
+            background: #f8f9fa;
+        }
+        .observer-graph {
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            margin: 1em 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 1em;
+            margin: 1.5em 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Philosophy & Theology</h1>
+        <p><em>Instances of triune structure in philosophical systems and theological frameworks.</em></p>
+
+        <div class="warning">
+            <strong>⚠️ Orientation Distinction:</strong> Triune structure appears in many systems, but not all are oriented toward the Source. 
+            <strong>Correct orientation</strong> (green) correlates with negative GCP deviations (Arbaeen, Holy Fire). 
+            <strong>Misoriented or mixed systems</strong> (orange) correlate with positive or null deviations. 
+            <strong>Purely structural systems</strong> (gray) are philosophically triune but not theologically oriented.
+        </div>
+
+        <hr>
+
+        <h2>✅ Correctly Oriented (Toward the Source)</h2>
+
+        <div class="instance oriented">
+            <h3>Christian Trinity</h3>
+            <p><strong>System:</strong> Father, Son, Holy Spirit — One God, three persons</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Father — unbegotten source, creator, ground of being</li>
+                <li><strong>Witness:</strong> Son — begotten, logos, incarnate revelation</li>
+                <li><strong>Mediator:</strong> Holy Spirit — proceeds, bond of love, sanctifier</li>
+            </ul>
+            <div class="observer-graph">
+                Father observes Son → eternally begets → Son observes Father → eternally reflects → Holy Spirit observes both Father and Son → proceeds from both (perichoresis)
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Orientation:</strong> Toward the Source — the Father is the unobserved totality; the Son reveals; the Spirit mediates.</p>
+            <p><strong>Diagnostic:</strong> No Father → no source; system collapses to unitarianism. No Son → no witness; God unrevealed, impersonal. No Spirit → no mediator; no bond, no indwelling, no sanctification. Trinity is the ur-triad — all other triads are shadows.</p>
+        </div>
+
+        <div class="instance oriented">
+            <h3>Ancient Torah (Pre-70 AD Temple Worship)</h3>
+            <p><strong>System:</strong> YHWH, Temple, Priesthood, Sacrificial system</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> YHWH — the unobserved Holy One; dwells in the Holy of Holies</li>
+                <li><strong>Witness:</strong> Temple — the dwelling place; the meeting point between heaven and earth</li>
+                <li><strong>Mediator:</strong> Priesthood — offers sacrifices; mediates between God and people</li>
+            </ul>
+            <div class="observer-graph">
+                YHWH observes covenant → gives Torah → Temple observes YHWH → presence dwells → Priesthood observes both → offers sacrifice; mediates atonement
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Orientation:</strong> Toward the Source — YHWH is the Source; Temple witnesses His presence; Priesthood mediates access.</p>
+            <p><strong>Diagnostic:</strong> Post-70 AD Judaism, without Temple and Priesthood, lost the full triad. Rabbinic Judaism substitutes prayer and Torah study — structurally triune but differently oriented.</p>
+        </div>
+
+        <div class="instance oriented">
+            <h3>Shia Islam (Imamate)</h3>
+            <p><strong>System:</strong> Allah, Qur'an, Imam, Divine guidance</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Allah — the One; transcendent; unobserved totality</li>
+                <li><strong>Witness:</strong> Qur'an — revealed word; eternal speech of God</li>
+                <li><strong>Mediator:</strong> Imam — divinely appointed guide; preserves and interprets revelation</li>
+            </ul>
+            <div class="observer-graph">
+                Allah observes creation → reveals Qur'an → Qur'an observes Allah → eternal speech → Imam observes both → interprets; guides community
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Orientation:</strong> Toward the Source — Allah is the Source; Qur'an witnesses; Imam mediates ongoing guidance.</p>
+            <p><strong>Diagnostic:</strong> This structure explains the negative GCP deviation at Arbaeen (20 million Shia pilgrims). The Imam is the mediator who keeps the orientation alive across history.</p>
+        </div>
+
+        <hr>
+
+        <h2>⚠️ Structurally Triune but Misoriented</h2>
+
+        <div class="instance misoriented">
+            <h3>Modern Rabbinic Judaism</h3>
+            <p><strong>System:</strong> God, Torah, Israel, Rabbinic interpretation</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> God — the Holy One; Creator</li>
+                <li><strong>Witness:</strong> Torah — written and oral law; divine teaching</li>
+                <li><strong>Mediator:</strong> Israel / Rabbis — the people; interpreters; keepers of tradition</li>
+            </ul>
+            <div class="observer-graph">
+                God observes covenant → gives Torah → Torah observes God → contains divine will → Israel/Rabbis observe both → interpret; apply to life
+            </div>
+            <p><strong>Φ(S) = 1</strong> (structurally)</p>
+            <p><strong>Orientation:</strong> Mixed — the Temple and Priesthood (direct mediators) are absent; the triad closes through study and prayer, but orientation is partially toward national identity as well as God.</p>
+        </div>
+
+        <div class="instance misoriented">
+            <h3>Sunni Islam</h3>
+            <p><strong>System:</strong> Allah, Qur'an, Ummah, Consensus (ijma)</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Allah — the One; transcendent</li>
+                <li><strong>Witness:</strong> Qur'an — revealed word; final scripture</li>
+                <li><strong>Mediator:</strong> Ummah / Consensus — community; scholars; ijma</li>
+            </ul>
+            <div class="observer-graph">
+                Allah observes humanity → reveals Qur'an → Qur'an observes Allah → contains guidance → Ummah observes both → consensus interprets; applies
+            </div>
+            <p><strong>Φ(S) = 1</strong> (structurally)</p>
+            <p><strong>Orientation:</strong> Mixed — the mediator is the community consensus rather than a living, divinely appointed Imam. Orientation is toward law and community as much as toward God.</p>
+        </div>
+
+        <div class="instance misoriented">
+            <h3>Sufism (Islamic Mysticism)</h3>
+            <p><strong>System:</strong> Allah, Shaykh, Tariqa, Spiritual path</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Allah — the Beloved; the Real</li>
+                <li><strong>Witness:</strong> Shaykh — spiritual guide; master of the path</li>
+                <li><strong>Mediator:</strong> Tariqa — the order; the spiritual path; the disciples</li>
+            </ul>
+            <div class="observer-graph">
+                Allah observes soul → calls to union → Shaykh observes Allah → knows the way → Tariqa observes both → follows; practices; seeks
+            </div>
+            <p><strong>Φ(S) = 1</strong> (structurally)</p>
+            <p><strong>Orientation:</strong> Mixed — intense orientation toward God, but often mediated through human shaykhs and tariqa structures; can drift toward veneration of the mediator rather than the Source.</p>
+        </div>
+
+        <div class="instance misoriented">
+            <h3>Mormonism (LDS)</h3>
+            <p><strong>System:</strong> God the Father, Jesus Christ, Holy Ghost, Prophet/President</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> God the Father — Elohim; literal father of spirits</li>
+                <li><strong>Witness:</strong> Jesus Christ — Jehovah; firstborn; savior</li>
+                <li><strong>Mediator:</strong> Holy Ghost / Prophet — reveals truth; leads church</li>
+            </ul>
+            <div class="observer-graph">
+                Father observes creation → plans salvation → Son observes Father → executes atonement → Holy Ghost/Prophet observes both → reveals; guides
+            </div>
+            <p><strong>Φ(S) = 1</strong> (structurally)</p>
+            <p><strong>Orientation:</strong> Mixed — the triad is present, but the understanding of God differs from Nicene Christianity; orientation is toward continuing revelation through living prophets.</p>
+        </div>
+
+        <hr>
+
+        <h2>📐 Purely Structural (Philosophical Systems)</h2>
+
+        <div class="instance structural">
+            <h3>Hegelian Dialectic</h3>
+            <p><strong>System:</strong> Thesis, Antithesis, Synthesis</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Thesis — initial proposition, existing order</li>
+                <li><strong>Witness:</strong> Antithesis — contradiction, opposition, negation</li>
+                <li><strong>Mediator:</strong> Synthesis — resolution, higher unity, sublation</li>
+            </ul>
+            <div class="observer-graph">
+                Thesis observes antithesis → contradiction recognized → antithesis observes thesis → opposition defined → synthesis observes both → resolves conflict; preserves what is useful
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Orientation:</strong> Structural only — no Source orientation; pure logical process.</p>
+        </div>
+
+        <div class="instance structural">
+            <h3>Peirce's Semiotic Triad</h3>
+            <p><strong>System:</strong> Representamen, Object, Interpretant</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Representamen — the sign vehicle; the form the sign takes</li>
+                <li><strong>Witness:</strong> Object — what the sign refers to; the referent</li>
+                <li><strong>Mediator:</strong> Interpretant — the sense made; the effect on the interpreter</li>
+            </ul>
+            <div class="observer-graph">
+                Representamen observes object → stands for it → object observes representamen → determines its form → interpretant observes both → mediates between sign and referent
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Orientation:</strong> Structural only — meaning arises from the triad itself, not from orientation toward a transcendent Source.</p>
+        </div>
+
+        <div class="instance structural">
+            <h3>Buddhist Three Jewels (Triratna)</h3>
+            <p><strong>System:</strong> Buddha, Dharma, Sangha</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Buddha — the enlightened one; the teacher</li>
+                <li><strong>Witness:</strong> Dharma — the teachings; the path</li>
+                <li><strong>Mediator:</strong> Sangha — the community; those who practice</li>
+            </ul>
+            <div class="observer-graph">
+                Buddha observes suffering → attains enlightenment → Dharma observes Buddha → teaches the path → Sangha observes both → practices; realizes
+            </div>
+            <p><strong>Φ(S) = 1</strong> (structurally)</p>
+            <p><strong>Orientation:</strong> Inward — the Source is not a transcendent Creator but an enlightened human; orientation is toward liberation from suffering, not toward a personal God.</p>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <a href="catalog.html">← Back to evidence catalog</a> &nbsp;|&nbsp;
+            <a href="../index.html">Home</a>
+        </div>
+    </div>
+</body>
+</html>
