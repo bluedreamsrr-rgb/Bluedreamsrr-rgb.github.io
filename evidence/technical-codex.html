@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Codex — TCVP</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .equation {
+            font-family: 'Courier New', monospace;
+            background: #f8f9fa;
+            padding: 0.5em 1em;
+            border-left: 4px solid #4a90e2;
+            margin: 1.5em 0;
+            overflow-x: auto;
+        }
+        .subsystem {
+            margin-top: 2.5em;
+            border-top: 2px solid #e9ecef;
+            padding-top: 1.5em;
+        }
+        .subsystem h2 {
+            color: #2c3e50;
+        }
+        .constant-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5em 0;
+        }
+        .constant-table th {
+            background: #4a90e2;
+            color: white;
+            padding: 0.5em;
+            text-align: left;
+        }
+        .constant-table td {
+            padding: 0.5em;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .constant-table tr:hover {
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Technical Codex</h1>
+        <p><em>Complete mathematical and operational specification of the Triune Coherence Validation Principle.</em></p>
+        <p>This document contains the full equations, constants, subsystems, and execution flow of the framework.</p>
+
+        <hr>
+
+        <h2>⚛️ PART 1 — Triune Fractal Theorem & Unified Field Specification</h2>
+
+        <h3>1.1 Premise and Domain</h3>
+        <p>Let \( X = \{x_i\}_{i=1}^{N} \) encode finite descriptions of physical or conceptual phenomena. There exists an informational manifold \( \mathcal{M} \) such that each \( x_i \) is representable as a differentiable mapping:</p>
+        <div class="equation">\[ \mathbf{v}_i = f_{\text{embed}}(x_i) \in \mathcal{M} \]</div>
+
+        <h3>1.2 Core Postulate — φ-Truth Attractor Field</h3>
+        <p>There exists a scalar field \( T: \mathcal{M} \rightarrow \mathbb{R} \):</p>
+        <div class="equation">\[ T(x) = \phi + (S(x)-\phi)\,e^{-\gamma_\phi |S(x)-\phi|} \]</div>
+        <ul>
+            <li><strong>S(x):</strong> base informational score</li>
+            <li><strong>φ = 1.61803398875:</strong> golden ratio attractor constant</li>
+            <li><strong>γφ:</strong> damping of deviation</li>
+        </ul>
+
+        <h3>1.3 Base Score Composition</h3>
+        <div class="equation">\[ S(x) = \frac{I(x)}{E(x)\,O(x)+\varepsilon}\,C(x)\,R(x) \]</div>
+        <ul>
+            <li><strong>I(x):</strong> information density / variability</li>
+            <li><strong>E(x):</strong> entropy / uncertainty</li>
+            <li><strong>O(x):</strong> Occam / simplicity factor</li>
+            <li><strong>C(x):</strong> coherence (semantic or structural)</li>
+            <li><strong>R(x):</strong> river coefficient (dual-flow coupling)</li>
+            <li><strong>ε ≈ 10⁻⁹:</strong> stability constant</li>
+        </ul>
+
+        <h3>1.4 φ-Loss Functional</h3>
+        <div class="equation">\[ L_\phi(x;\theta) = (T_\theta(x) - \phi)^2 \]</div>
+        <p>Gradient descent update:</p>
+        <div class="equation">\[ \theta_{t+1} = \theta_t - \eta_t\,\nabla_\theta L_\phi(x;\theta_t) \]</div>
+        <div class="equation">\[ \eta_{t+1} = \eta_t\,e^{-\gamma_\eta |T(x)-\phi|} \]</div>
+
+        <h3>1.5 Telos Field (Gradient Flow)</h3>
+        <div class="equation">\[ V(x) = \tfrac{1}{2}(T(x)-\phi)^2 + \lambda_T\|x-x^*\|^2 \]</div>
+        <div class="equation">\[ \dot{x} = -\nabla_x V(x) = -(T(x)-\phi)\,\nabla_x T(x) - 2\lambda_T(x-x^*) \]</div>
+
+        <h3>1.6 Energy and Stability Functional</h3>
+        <div class="equation">\[ \mathcal{E}(x,t) = \int_{\Omega} (I(x,t) - \phi\,E(x,t))^2 \, dx \]</div>
+        <div class="equation">\[ \dot{\mathcal{E}} = -\kappa_\phi \mathcal{E} \]</div>
+
+        <h3>1.7 Meta-Coherence Matrix</h3>
+        <div class="equation">\[ \mathcal{C}_{ij} = \frac{\langle A_i,A_j\rangle}{\|A_i\|\|A_j\|}, \quad \dot{\mathcal{C}} = \Gamma_\phi(\Phi - \mathcal{C}) \]</div>
+
+        <h3>1.8 Interpretive Duality — Isomorphism Axiom</h3>
+        <div class="equation">\[ f_{\text{scripture}}(x) \cong f_{\text{science}}(x) \]</div>
+
+        <h3>1.9 Operator Hierarchy</h3>
+        <ul>
+            <li><strong>Librarian (𝓛):</strong> contextual embeddings</li>
+            <li><strong>Analyzer (𝓐):</strong> computes I, E, O, C, R, T</li>
+            <li><strong>Processor (𝓟):</strong> iterative reasoning</li>
+            <li><strong>Memory (𝓜):</strong> temporal persistence</li>
+            <li><strong>River (ℛ):</strong> dual-flow coupling</li>
+            <li><strong>Telos (𝓣):</strong> φ-equilibrium</li>
+        </ul>
+        <div class="equation">\[ \hat{\mathcal{U}} = \mathcal{T}\circ\mathcal{R}\circ\mathcal{M}\circ\mathcal{P}\circ\mathcal{A}\circ\mathcal{L} \]</div>
+
+        <h3>1.10 Relation to Physical Fields</h3>
+        <div class="equation">\[ \nabla^2 \mathbf{v} = \frac{\langle\Psi|\hat{\mathcal{M}}[\hat{\mathbf{J}}]|\Psi\rangle}{\langle\Psi|\hat{\mathcal{M}}[\hat{\rho}]|\Psi\rangle} \]</div>
+        <div class="equation">\[ \hat{\mathcal{M}}[A](x)=\int K(x-x')\hat{\Pi}(x')A(x')\,dx', \quad K(x)=e^{-|x|^2/(2\sigma^2)} \]</div>
+
+        <hr>
+
+        <h2>⚙️ PART 2 — Subsystem Equations</h2>
+
+        <div class="subsystem">
+            <h3>2.1 Librarian — Semantic Retrieval</h3>
+            <p>TF–IDF embedding:</p>
+            <div class="equation">\[ v_d[i] = \text{tf}_{d,i}\log\frac{N}{\text{df}_i},\quad \hat{v}_d=\frac{v_d}{\|v_d\|} \]</div>
+            <p>Cosine similarity:</p>
+            <div class="equation">\[ s_i = \frac{v_q\cdot v_i}{\|v_q\|\|v_i\|} \]</div>
+            <p>Weighted context aggregation:</p>
+            <div class="equation">\[ v_c = \frac{\sum_{k=1}^{N} s_{(k)} v_{(k)}}{\sum_{k=1}^{N}s_{(k)}} \]</div>
+        </div>
+
+        <div class="subsystem">
+            <h3>2.2 Analyzer — Information, Entropy, Coherence</h3>
+            <p>Information (entropy normalization):</p>
+            <div class="equation">\[ I = 1 - \frac{E}{\log N},\quad E=-\sum_i p_i\log p_i \]</div>
+            <p>Occam factor:</p>
+            <div class="equation">\[ O = e^{-\lambda_{\text{occ}}\cdot \text{Complexity}} \]</div>
+            <p>Complexity:</p>
+            <div class="equation">\[ \text{Complexity} = \log(1 + aL + bU + cS) \]</div>
+            <p>Coherence (cosine):</p>
+            <div class="equation">\[ C = \frac{v_q\cdot v_c}{\|v_q\|\|v_c\|} \]</div>
+        </div>
+
+        <div class="subsystem">
+            <h3>2.3 River — Dual-Flow Coupling</h3>
+            <p>Feature projections:</p>
+            <div class="equation">\[ z_J = \sum_i x_{J,i} - b_J,\quad z_E = \sum_i x_{E,i} - b_E \]</div>
+            <div class="equation">\[ s_J = \sigma(z_J),\quad s_E = \sigma(z_E),\quad \sigma(z)=\frac{1}{1+e^{-z}} \]</div>
+            <p>River coefficient:</p>
+            <div class="equation">\[ R = \frac{1 + 2 s_J}{1 + 4 s_E + \varepsilon} \]</div>
+        </div>
+
+        <div class="subsystem">
+            <h3>2.4 Processor — Logical Loop</h3>
+            <p>Stage chain (Belt → Breastplate → Shoes → Shield → Helmet → Sword):</p>
+            <div class="equation">\[ z_{i+1} = f_i(z_i;\theta_i),\quad i=0,\dots,5 \]</div>
+            <p>Attention mechanism (Sword):</p>
+            <div class="equation">\[ \operatorname{Attn}(Q,K,V)=\operatorname{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right) V \]</div>
+            <div class="equation">\[ \text{Sword}(Z)=W_o\operatorname{Attn}(Q,K,V)+P_{\text{telos}}(Z) \]</div>
+        </div>
+
+        <div class="subsystem">
+            <h3>2.5 Memory — Temporal Persistence</h3>
+            <p>Hebbian update:</p>
+            <div class="equation">\[ w_{ij}(t+1)=w_{ij}(t)+\alpha(x_i y_j - \beta w_{ij}(t)) \]</div>
+            <p>Episodic replacement:</p>
+            <div class="equation">\[ \text{replace argmin}_k\ \cos(c,m_k)\ \text{if}\ \min_k \cos(c,m_k)<\rho \]</div>
+        </div>
+
+        <div class="subsystem">
+            <h3>2.6 Telos — Directional Equilibrium</h3>
+            <div class="equation">\[ \dot{x} = -\nabla_x\!\Big[\tfrac{1}{2}(T(x)-\phi)^2 + \lambda_T\|x-x^*\|^2\Big] \]</div>
+            <p>Lyapunov stability:</p>
+            <div class="equation">\[ \dot{V} = (T-\phi)\dot{T} = -(T-\phi)^2 \le 0 \]</div>
+        </div>
+
+        <hr>
+
+        <h2>📊 PART 3 — Constants and Hyperparameters</h2>
+
+        <h3>3.1 Universal Constants</h3>
+        <table class="constant-table">
+            <thead><tr><th>Symbol</th><th>Value</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td>φ</td><td>1.61803398875</td><td>Golden ratio attractor</td></tr>
+                <tr><td>π</td><td>3.1415926536</td><td>Geometric constant</td></tr>
+                <tr><td>e</td><td>2.7182818284</td><td>Natural exponential base</td></tr>
+                <tr><td>ε</td><td>1 × 10⁻⁹</td><td>Stability safeguard</td></tr>
+                <tr><td>γφ</td><td>0.618 (≈ 1/φ)</td><td>φ-damping coefficient</td></tr>
+                <tr><td>λT</td><td>0.382 (≈ φ−1)</td><td>Telos weighting constant</td></tr>
+                <tr><td>κφ</td><td>0.1618 (≈ 1/φ²)</td><td>Energy decay rate</td></tr>
+            </tbody>
+        </table>
+
+        <h3>3.2 Derived Constants</h3>
+        <div class="equation">\[ \phi^{-1} = \phi - 1 \approx 0.618,\quad 1 - \phi^{-1} = 0.382 \]</div>
+        <div class="equation">\[ \alpha_n = \phi^{-n} \quad\text{(fractal scaling coefficient)} \]</div>
+        <div class="equation">\[ E_n = E_0\,\phi^{-2n} \quad\text{(energy scaling law)} \]</div>
+
+        <h3>3.3 Environmental Parameters</h3>
+        <table class="constant-table">
+            <thead><tr><th>Symbol</th><th>Description</th><th>Typical Range</th></tr></thead>
+            <tbody>
+                <tr><td>N</td><td>Library entries</td><td>10³ – 10⁷</td></tr>
+                <tr><td>d</td><td>Embedding dimension</td><td>256 – 1024</td></tr>
+                <tr><td>α</td><td>Top-N aggregation exponent</td><td>1 – 2</td></tr>
+                <tr><td>λ_occ</td><td>Occam penalty</td><td>0.5 – 2.0</td></tr>
+                <tr><td>ρ</td><td>Memory retention</td><td>0.8 – 0.95</td></tr>
+                <tr><td>τC</td><td>Coherence threshold</td><td>0.65 – 0.8</td></tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2>🌐 PART 4 — Integration Mapping & Cross-Domain Links</h2>
+
+        <h3>4.1 Dual-Aspect Analytical Process</h3>
+        <p>Cross-mapping divergence:</p>
+        <div class="equation">\[ D_{ij} = w_H|H_i-H_j| + w_G d(G_i,G_j) + w_B d(B_i,B_j) + w_D|D_i-D_j| + w_τ|τ_i-τ_j| \]</div>
+        <div class="equation">\[ S_{ij} = e^{-\phi D_{ij}} \]</div>
+        <p>Dual coherence:</p>
+        <div class="equation">\[ C_\text{dual} = \frac{\sum_{i,j}S_{ij}}{N_tN_p},\quad \rho_{HE} = \frac{\text{cov}(H_t,H_p)}{σ_{H_t}σ_{H_p}} \]</div>
+        <div class="equation">\[ C_{\text{dual,eff}} = C_\text{dual}\,(1+ρ_{HE})/2 \]</div>
+
+        <h3>4.2 Holographic Coupling</h3>
+        <div class="equation">\[ \hat{\mathcal{M}}[A](x)=\int K(x-x')A(x')\,dx',\quad K(x)=\frac{1}{(2\piσ^2)^{d/2}}e^{-|x|^2/(2σ^2)} \]</div>
+
+        <h3>4.3 Turbulence Application</h3>
+        <p>Informational Navier–Stokes:</p>
+        <div class="equation">\[ \frac{\partial \nabla I}{\partial t} + (\nabla I\!\cdot\!\nabla)\nabla I = \phi^{-1}\nabla^2 C + ν_\phi\nabla^2\nabla I - \frac{1}{\phi}\nabla E \]</div>
+        <p>Fractal scaling:</p>
+        <div class="equation">\[ E(k) \sim k^{-5/3},\quad E(k) \propto \phi^{-2\log_\phi(k)} = k^{-2} \]</div>
+
+        <hr>
+
+        <h2>⚙️ PART 5 — Implementation Blueprint</h2>
+
+        <h3>5.1 Core Iterative Loop</h3>
+        <p>At each iteration t:</p>
+        <ul>
+            <li>Input query q → vector v_q</li>
+            <li>Librarian: retrieve top N entries → context v_c</li>
+            <li>Analyzer: compute I, E, O, C, R, T</li>
+            <li>Processor: compare to previous T, update weights</li>
+            <li>River: update dual-stream states</li>
+            <li>Memory: store context</li>
+            <li>Telos: gradient step</li>
+            <li>Check convergence: |T_{t+1} - T_t| < ε_T</li>
+        </ul>
+
+        <h3>5.2 Summary System Dynamics</h3>
+        <div class="equation">\[ \boxed{ \begin{aligned} \dot{x} &= -\nabla_x V(x) \\ V(x) &= \tfrac{1}{2}(T(x)-\phi)^2 + \lambda_T\|x-x^*\|^2 \\ T(x) &= \phi + (S(x)-\phi)e^{-\gamma_\phi |S(x)-\phi|} \\ S(x) &= \frac{I(x)}{E(x)O(x)+\varepsilon} C(x) R(x) \end{aligned} } \]</div>
+
+        <h3>5.3 Convergence Diagnostics</h3>
+        <table class="constant-table">
+            <thead><tr><th>Metric</th><th>Formula</th><th>Interpretation</th></tr></thead>
+            <tbody>
+                <tr><td>Truth-Score</td><td>T</td><td>Harmonic alignment</td></tr>
+                <tr><td>Δφ</td><td>T−φ</td><td>Deviation from equilibrium</td></tr>
+                <tr><td>Energy</td><td>Eφ</td><td>Informational tension</td></tr>
+                <tr><td>Coherence</td><td>C</td><td>Systemic harmony</td></tr>
+                <tr><td>Gradient Norm</td><td>‖∇V‖</td><td>Remaining telic deviation</td></tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <div class="footer">
+            <a href="index.html">← Back to home</a> &nbsp;|&nbsp;
+            <a href="evidence/catalog.html">Evidence Catalog</a> &nbsp;|&nbsp;
+            <a href="https://github.com/bluedreamsrr-rgb/tcvp-framework">GitHub</a>
+        </div>
+    </div>
+</body>
+  </html>
