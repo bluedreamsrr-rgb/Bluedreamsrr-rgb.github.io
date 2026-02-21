@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports & Games — TCVP Evidence</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .instance {
+            margin-top: 2em;
+            padding: 1em;
+            background: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+        }
+        .instance h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .observer-graph {
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 Sports & Games</h1>
+        <p><em>Instances of triune structure in athletic competition, games, and sports strategy.</em></p>
+
+        <hr>
+
+        <div class="instance">
+            <h3>American Football — Three Phases of the Game</h3>
+            <p><strong>System:</strong> Offense, Defense, Special teams, Complete football team</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Offense — possession; advances ball; scores touchdowns and field goals</li>
+                <li><strong>Witness:</strong> Defense — prevents opponent advancement; forces turnovers; scores defensive points</li>
+                <li><strong>Mediator:</strong> Special teams — kicking game; field position; punts, kickoffs, returns, field goals</li>
+            </ul>
+            <div class="observer-graph">
+                Offense observes defense and field position → exploits weaknesses; calls plays → defense observes offensive formation → reacts; blitzes; covers → special teams observes both offense and defense → flips field; scores when offense stalls
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Offense alone → 2011 Patriots; elite scoring, no defense, lost Super Bowl. Defense alone → 2000 Ravens; won with great D, but special teams were also elite. Offense + Defense without special teams → 2018 Chiefs; elite on both, but special teams failures cost playoff games. All three phases together → complete teams win championships.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Down System (1st, 2nd, 3rd Down)</h3>
+            <p><strong>System:</strong> 1st down, 2nd down, 3rd down, Down cycle</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> 1st down — fresh set; multiple options; low risk</li>
+                <li><strong>Witness:</strong> 2nd down — intermediate; balance of run/pass; manageable yardage</li>
+                <li><strong>Mediator:</strong> 3rd down — conversion attempt; do-or-die; defines possession</li>
+            </ul>
+            <div class="observer-graph">
+                1st down observes down and distance → scripted plays; establish rhythm → 2nd down observes 1st down result → short, medium, or long yardage → 3rd down observes both 1st and 2nd down outcomes → conversion pressure → 4th down observes 3rd down → either celebration (converted) or punt/FG
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> One down to gain 10 → Canadian football; more offense, less strategy. Two downs → some strategy, but still heavily offense-favored. Three downs → balanced; requires sustained execution. Three downs is the judgment phase; 4th is termination.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three Outcomes of a Pass (Completion, Incompletion, Interception)</h3>
+            <p><strong>System:</strong> Completion, Incompletion, Interception, Pass play</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Completion — successful; positive yards; first down potential</li>
+                <li><strong>Witness:</strong> Incompletion — failed; no gain; clock stops; next down</li>
+                <li><strong>Mediator:</strong> Interception — failed catastrophically; turnover; possession change</li>
+            </ul>
+            <div class="observer-graph">
+                Completion observes QB and receiver → catch; gain; retains possession → incompletion observes completion and interception → ball hits ground; neutral outcome → interception observes both completion and incompletion → defender catches; possession flips
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Completion/Incompletion only → arena football? no turnovers; incomplete risk-reward. Completion/Interception only → no neutral outcome; every incomplete is turnover? chaos. Three outcomes → complete spectrum: success, neutral failure, catastrophic failure.</p>
+        </div>
+
+        <div class="instance">
+            <h3>3-4 Defensive Front (Nose Tackle, Defensive Tackle, Defensive End)</h3>
+            <p><strong>System:</strong> Nose tackle (0-tech), Defensive tackle (3-tech), Defensive end (5-tech), 3-4 defense</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Nose tackle — head-up on center; occupies double team; stops run</li>
+                <li><strong>Witness:</strong> Defensive tackle — 3-technique; outside shoulder of guard; penetrates; pass rush</li>
+                <li><strong>Mediator:</strong> Defensive end — 5-technique; outside shoulder of tackle; sets edge; contain</li>
+            </ul>
+            <div class="observer-graph">
+                Nose tackle observes center and guards → demands double; frees linebackers → defensive tackle observes nose and offensive guard → one-on-one; penetration responsibility → defensive end observes both nose and tackle → force run inside; rush passer
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Nose alone → run stopped up middle, but edges vulnerable. Tackle alone → interior penetration, but no anchor. Ends alone → edge set, but interior gashed. Three positions together close the defensive line.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Olympic Medals (Gold, Silver, Bronze)</h3>
+            <p><strong>System:</strong> Gold medal, Silver medal, Bronze medal, Podium</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Gold — first place; highest achievement; top of podium</li>
+                <li><strong>Witness:</strong> Silver — second place; excellent performance; runner-up</li>
+                <li><strong>Mediator:</strong> Bronze — third place; still a medal; last on podium</li>
+            </ul>
+            <div class="observer-graph">
+                Gold observes competition → best performance → silver observes gold → close but second → bronze observes both → still among the best; completes the podium
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Gold alone → no recognition for others; incomplete ceremony. Gold + Silver → top two recognized, but third-place feels excluded. Three medals → complete podium; all top finishers honored. Fourth place gets nothing.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Baseball — Three Strikes and Three Outs</h3>
+            <p><strong>System:</strong> Strike 1, Strike 2, Strike 3 — Out 1, Out 2, Out 3</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Strike 1 / Out 1 — first; establishes count; warning</li>
+                <li><strong>Witness:</strong> Strike 2 / Out 2 — second; pressure builds; two strikes</li>
+                <li><strong>Mediator:</strong> Strike 3 / Out 3 — third; batter out / inning ends</li>
+            </ul>
+            <div class="observer-graph">
+                Strike 1 observes pitch → called strike; batter warned → strike 2 observes strike 1 → foul or miss; pressure mounts → strike 3 observes both → swinging or called; batter out → inning repeats for three outs
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Two strikes → batter still alive; at bat continues. Three strikes → out; at bat ends. Two outs → inning continues. Three outs → inning ends; sides swap. Three is the closure number in baseball.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Weightlifting — Three Attempts</h3>
+            <p><strong>System:</strong> First attempt, Second attempt, Third attempt, Competition</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> First attempt — opening weight; establish a score; conservative</li>
+                <li><strong>Witness:</strong> Second attempt — moderate increase; challenge; improvement</li>
+                <li><strong>Mediator:</strong> Third attempt — final attempt; maximum effort; record attempt</li>
+            </ul>
+            <div class="observer-graph">
+                First attempt observes competition → safe lift; score on board → second attempt observes first → increase weight; push limits → third attempt observes both → final chance; go for maximum
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> One attempt → no room for error; single chance. Two attempts → better, but no final shot after failure. Three attempts → complete progression: establish, challenge, max. Standard in Olympic weightlifting.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Chess Outcomes (White Win, Black Win, Draw)</h3>
+            <p><strong>System:</strong> White victory, Black victory, Draw, Game result</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> White win — first-mover advantage; decisive result</li>
+                <li><strong>Witness:</strong> Black win — overcoming disadvantage; decisive result</li>
+                <li><strong>Mediator:</strong> Draw — no decisive result; stalemate, insufficient material, repetition</li>
+            </ul>
+            <div class="observer-graph">
+                White win observes position → checkmate; resignation → black win observes position → checkmate; resignation → draw observes both → neither can force win; game ends without decisive result
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Two outcomes only (win/loss) → no draw possible; incomplete. Three outcomes cover all possibilities. Draw is the mediator between white and black victories.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Threefold Repetition (Chess)</h3>
+            <p><strong>System:</strong> First occurrence, Second occurrence, Third occurrence, Draw by repetition</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> First occurrence — position appears initially</li>
+                <li><strong>Witness:</strong> Second occurrence — position repeats; player may claim draw on next</li>
+                <li><strong>Mediator:</strong> Third occurrence — position repeats again; draw can be claimed immediately</li>
+            </ul>
+            <div class="observer-graph">
+                First occurrence observes board → position recorded → second occurrence observes first → repetition noted; warning → third occurrence observes both → repetition confirmed; draw claimable
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Two occurrences → potential repetition, but not yet claimable. Three occurrences → closure; game can end. Threefold repetition is a draw rule.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Poker — Three Streets (Flop, Turn, River)</h3>
+            <p><strong>System:</strong> Flop, Turn, River, Community cards, Betting rounds</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Flop — first three community cards; initial hand development</li>
+                <li><strong>Witness:</strong> Turn — fourth card; additional information; betting intensifies</li>
+                <li><strong>Mediator:</strong> River — fifth and final card; complete board; final betting; showdown</li>
+            </ul>
+            <div class="observer-graph">
+                Flop observes hole cards → first three community cards; assess hand → turn observes flop → fourth card; update hand strength → river observes both flop and turn → final card; complete information; final decision
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Flop alone → incomplete hand; too early. Flop + Turn → more information, but still incomplete. Flop + Turn + River → complete board; all cards revealed; hand fully determined. Three streets are the minimal complete betting structure in Texas Hold'em.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three Dice</h3>
+            <p><strong>System:</strong> Die A, Die B, Die C, Total or combination</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Die A — first random outcome</li>
+                <li><strong>Witness:</strong> Die B — second random outcome</li>
+                <li><strong>Mediator:</strong> Die C — third random outcome; completes set</li>
+            </ul>
+            <div class="observer-graph">
+                Die A observes throw → random value → die B observes throw → random value → die C observes throw → random value → total or combination observes all three → game outcome (Yahtzee, craps, etc.)
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> One die → simple probability; limited games. Two dice → more combinations; craps uses two. Three dice → full range of games (Yahtzee, Sic Bo, many others). Many dice games use three as the standard.</p>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <a href="catalog.html">← Back to evidence catalog</a> &nbsp;|&nbsp;
+            <a href="../index.html">Home</a>
+        </div>
+    </div>
+</body>
+</html>
