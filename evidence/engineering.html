@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering — TCVP Evidence</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .instance {
+            margin-top: 2em;
+            padding: 1em;
+            background: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+        }
+        .instance h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .observer-graph {
+            font-family: 'Courier New', monospace;
+            background: #fff;
+            padding: 0.5em;
+            border: 1px solid #ddd;
+            margin: 1em 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Engineering</h1>
+        <p><em>Instances of triune structure in mechanical, electrical, civil, and systems engineering.</em></p>
+
+        <hr>
+
+        <div class="instance">
+            <h3>Three-Point Bending Test</h3>
+            <p><strong>System:</strong> Load application, Two supports, Test specimen, Stress-strain response</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Central loading nose — applies downward force; point of maximum stress</li>
+                <li><strong>Witness:</strong> Left support — reaction force; moment arm; boundary condition</li>
+                <li><strong>Mediator:</strong> Right support — reaction force; completes moment balance; enables deflection</li>
+            </ul>
+            <div class="observer-graph">
+                Loading nose observes specimen → force measured → left support observes loading nose and specimen → reaction force; pivot point → right support observes both supports and loading nose → symmetric boundary; completes force balance
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Two supports + single center load → symmetric; determinate; maximum moment at center. Three-point bending is the minimal symmetric test configuration. Forces sum to zero; moments sum to zero.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three-Hinged Arch</h3>
+            <p><strong>System:</strong> Left abutment hinge, Right abutment hinge, Crown hinge, Arch structure</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Left abutment hinge — fixed support; resists vertical and horizontal forces; rotation free</li>
+                <li><strong>Witness:</strong> Right abutment hinge — fixed support; resists vertical and horizontal forces; rotation free</li>
+                <li><strong>Mediator:</strong> Crown hinge — apex hinge; allows rotation; makes structure determinate</li>
+            </ul>
+            <div class="observer-graph">
+                Left hinge observes arch and loading → reaction forces computed → right hinge observes left hinge and loading → symmetric or asymmetric reactions → crown hinge observes both left and right hinges → moment = 0; enables statical determinacy
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> No hinges → fixed arch; highly redundant; requires stiffness method. Two hinges (abutments only) → 1° indeterminate; temperature stresses. Three hinges → statically determinate; no thermal stresses; predictable. Three-hinged arch is the minimal determinate curved structure.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three-Phase Induction Motor</h3>
+            <p><strong>System:</strong> Stator winding Phase A, Phase B, Phase C, Rotor, Rotating magnetic field</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Phase A — 0° reference; current Iₐ = I₀ sin(ωt)</li>
+                <li><strong>Witness:</strong> Phase B — 120° lag; current Iᵦ = I₀ sin(ωt - 120°)</li>
+                <li><strong>Mediator:</strong> Phase C — 240° lag; current I꜀ = I₀ sin(ωt - 240°)</li>
+            </ul>
+            <div class="observer-graph">
+                Phase A observes power source → creates magnetic field vector at 0° → phase B observes source → creates magnetic field at 120° → phase C observes source → creates magnetic field at 240° → rotating magnetic field observes all three phases → vector sum rotates at synchronous speed → rotor observes rotating field → induced current; torque; rotation
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Single phase → pulsating field; no starting torque; requires capacitor. Two phases → rotating field but unbalanced; rarely used. Three phases → 120° offset; perfectly balanced; self-starting; high efficiency. Three-phase induction motor is the workhorse of industry.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Bipolar Junction Transistor (BJT)</h3>
+            <p><strong>System:</strong> Emitter, Base, Collector, Bipolar junction transistor</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Emitter — heavily doped; injects charge carriers into base</li>
+                <li><strong>Witness:</strong> Base — thin, lightly doped; controls current flow</li>
+                <li><strong>Mediator:</strong> Collector — collects carriers; reverse-biased junction; output</li>
+            </ul>
+            <div class="observer-graph">
+                Emitter observes base-emitter junction → forward bias; injects electrons (NPN) or holes (PNP) → base observes emitter and collector → thin region; most carriers swept to collector; small base current controls large collector current → collector observes base-collector junction → reverse bias; collects carriers; output current
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Two-terminal devices (diode) → cannot amplify. Three-terminal devices (BJT, FET) → active; input controls output; gain. Emitter supplies, base modulates, collector collects. The triad is the minimal active device.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three-Way Catalytic Converter</h3>
+            <p><strong>System:</strong> Oxidation of CO and HC, Reduction of NOx, Three-way catalyst, Oxygen storage</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Oxidation catalyst — platinum, palladium; 2CO + O₂ → 2CO₂; CₓHᵧ + O₂ → CO₂ + H₂O</li>
+                <li><strong>Witness:</strong> Reduction catalyst — rhodium; 2NO + 2CO → N₂ + 2CO₂; 2NO + 2H₂ → N₂ + 2H₂O</li>
+                <li><strong>Mediator:</strong> Oxygen storage — ceria (CeO₂); stores/releases O₂; maintains stoichiometry</li>
+            </ul>
+            <div class="observer-graph">
+                Oxidation catalyst observes exhaust O₂ → if lean, oxidizes CO/HC efficiently → reduction catalyst observes oxidation and exhaust NOx → if rich, reduces NOx efficiently → oxygen storage observes both oxidation and reduction catalysts → buffers O₂; enables simultaneous conversion
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Oxidation alone → reduces CO and HC, but NOx unchanged. Reduction alone → reduces NOx, but CO and HC increase. Three-way catalyst with oxygen storage → maintains stoichiometry; all three pollutants reduced simultaneously.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three-Legged Stool</h3>
+            <p><strong>System:</strong> Leg A, Leg B, Leg C, Seat, Floor</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Leg A — first point of ground contact</li>
+                <li><strong>Witness:</strong> Leg B — second point; establishes line of stability</li>
+                <li><strong>Mediator:</strong> Leg C — third point; defines plane; eliminates wobble</li>
+            </ul>
+            <div class="observer-graph">
+                Leg A observes seat and floor → transfers vertical load → leg B observes leg A and floor → establishes orientation → leg C observes both leg A and leg B → completes the tripod; determines plane → all three legs observe center of mass
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> One leg → impossible; falls immediately. Two legs → rocks along axis; requires wall. Three legs → always stable on any uneven surface; each leg adjusts independently. Four legs → stable only on perfectly flat floor; any unevenness causes wobble. Three-legged stool is the minimal stable seating device.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three-Point Hitch (Tractor)</h3>
+            <p><strong>System:</strong> Two lower lift arms, Top link, Implement, Tractor</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Left lower lift arm — provides lifting force; vertical positioning</li>
+                <li><strong>Witness:</strong> Right lower lift arm — provides lifting force; symmetric partner</li>
+                <li><strong>Mediator:</strong> Top link — adjustable length; controls implement pitch angle</li>
+            </ul>
+            <div class="observer-graph">
+                Left lift arm observes implement and hydraulics → lifts left side → right lift arm observes left arm and implement → lifts right side; maintains level → top link observes both lift arms and implement → sets angle; transfers thrust
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> One point → trailer hitch; implement trails freely; no lift or angle control. Two points → some lift and tilt, but pitch uncontrolled. Three points → fully constrained; lift, tilt, pitch; implement becomes part of tractor. Three-point hitch is the minimal fully controlled implement attachment.</p>
+        </div>
+
+        <div class="instance">
+            <h3>PID Controller</h3>
+            <p><strong>System:</strong> Proportional term, Integral term, Derivative term, Setpoint, Process variable</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Proportional term (P) — responds to current error; Kp × e(t)</li>
+                <li><strong>Witness:</strong> Integral term (I) — accumulates past error; Ki × ∫e(τ)dτ</li>
+                <li><strong>Mediator:</strong> Derivative term (D) — predicts future error; Kd × de/dt</li>
+            </ul>
+            <div class="observer-graph">
+                P observes current error → immediate correction → I observes error history → steady-state accuracy → D observes error trend → damping, stability → summation observes all three → control signal u(t)
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> No P → sluggish; cannot react to disturbances. No I → steady-state error; never reaches setpoint. No D → overshoot; oscillates; unstable under gain. PID closes present → past → future error into a single correction signal.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Triple Modular Redundancy (TMR)</h3>
+            <p><strong>System:</strong> Three identical modules, Voter circuit, Majority output</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> Module A — primary computation channel</li>
+                <li><strong>Witness:</strong> Module B — redundant computation channel</li>
+                <li><strong>Mediator:</strong> Module C + Voter — second redundant channel + majority voter; resolves discrepancies</li>
+            </ul>
+            <div class="observer-graph">
+                Module A observes input → produces output A → module B observes input → produces output B → module C observes input → produces output C → voter observes all three modules → compares; selects majority
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Two modules only → tie; voter cannot resolve; system halts. Four modules → overconstrained; no improvement over three. No voter → no mediation; outputs conflict without resolution. TMR persists because three is the minimum number that allows majority closure.</p>
+        </div>
+
+        <div class="instance">
+            <h3>Three-Stage Rocket</h3>
+            <p><strong>System:</strong> First stage, Second stage, Third stage, Payload, Staging</p>
+            <p><strong>Triune Decomposition:</strong></p>
+            <ul>
+                <li><strong>Source:</strong> First stage — lifts rocket from ground; highest thrust; largest fuel load</li>
+                <li><strong>Witness:</strong> Second stage — continues ascent; lighter; optimized for vacuum</li>
+                <li><strong>Mediator:</strong> Third stage — final push to orbital velocity; small, precise burns</li>
+            </ul>
+            <div class="observer-graph">
+                First stage observes gravity → liftoff; acceleration → second stage observes first stage separation → continues burn; optimizes trajectory → third stage observes both previous stages → circularizes orbit; precise insertion
+            </div>
+            <p><strong>Φ(S) = 1</strong></p>
+            <p><strong>Diagnostic:</strong> Single stage → limited payload fraction; inefficient. Two stages → better but still suboptimal for orbital insertion. Three stages → optimal mass ratio; each stage sized for specific portion of flight. Three is the classic minimum for orbital rockets.</p>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <a href="catalog.html">← Back to evidence catalog</a> &nbsp;|&nbsp;
+            <a href="../index.html">Home</a>
+        </div>
+    </div>
+</body>
+</html>
