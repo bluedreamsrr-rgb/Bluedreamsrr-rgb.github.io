@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCVP — Triadic Coherence Validation Principle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d0d0d;
+      --paper: #f4f1ea;
+      --gold: #b8922a;
+      --gold-light: #d4ae5a;
+      --rule: #c8bfa8;
+      --muted: #6b6355;
+      --accent: #1a3a5c;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0.4;
+    }
+
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ── HEADER ── */
+    header {
+      padding: 5rem 0 3rem;
+      border-bottom: 1px solid var(--rule);
+      animation: fadeDown 1s ease both;
+    }
+
+    .sigil {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 300;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 1rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-style: italic;
+      max-width: 560px;
+      margin-bottom: 2rem;
+    }
+
+    .warning-note {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      border-left: 2px solid var(--rule);
+      padding-left: 1rem;
+      line-height: 1.6;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--rule);
+      animation: fadeUp 0.8s ease both;
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+    section:nth-child(6) { animation-delay: 0.5s; }
+
+    .section-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      font-weight: 400;
+      margin-bottom: 0.8rem;
+      letter-spacing: -0.01em;
+    }
+
+    h2 em { font-style: italic; color: var(--gold); }
+
+    p {
+      color: #2a2520;
+      margin-bottom: 1rem;
+      max-width: 640px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* ── LINK GRID ── */
+    .link-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+      margin-top: 1.8rem;
+    }
+
+    .link-card {
+      background: var(--paper);
+      padding: 1.4rem 1.6rem;
+      text-decoration: none;
+      color: var(--ink);
+      display: block;
+      transition: background 0.2s ease;
+      position: relative;
+    }
+
+    .link-card:hover {
+      background: #ede9df;
+    }
+
+    .link-card:hover .card-arrow {
+      transform: translateX(4px);
+    }
+
+    .card-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .card-arrow {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.4rem;
+      color: var(--rule);
+      font-size: 1rem;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .link-card:hover .card-arrow { color: var(--gold); }
+
+    /* Full-width card */
+    .link-card.full {
+      grid-column: 1 / -1;
+    }
+
+    /* ── DEFINITIONS BLOCK ── */
+    .definitions {
+      margin-top: 1.8rem;
+      border-left: 2px solid var(--gold);
+      padding-left: 1.5rem;
+    }
+
+    .def-item {
+      margin-bottom: 1.4rem;
+    }
+
+    .def-term {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.2rem;
+    }
+
+    .def-body {
+      font-size: 0.95rem;
+      color: #2a2520;
+      font-style: italic;
+      line-height: 1.6;
+      max-width: 580px;
+    }
+
+    /* ── PREDICTION BLOCK ── */
+    .prediction-block {
+      margin-top: 1.8rem;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 2rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prediction-block::before {
+      content: '2026';
+      position: absolute;
+      right: -0.5rem;
+      top: -1rem;
+      font-size: 8rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.04);
+      font-family: 'Space Mono', monospace;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .prediction-block .section-label {
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .prediction-block p {
+      color: #d4cfc6;
+      font-size: 0.95rem;
+      max-width: 100%;
+    }
+
+    .event-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .event-list li {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: var(--gold-light);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .event-list li:last-child { border-bottom: none; }
+
+    .prediction-result {
+      margin-top: 1rem;
+      font-style: italic;
+      color: var(--gold-light);
+      font-size: 1rem;
+    }
+
+    /* ── RUNTIME BLOCK ── */
+    .runtime-block {
+      margin-top: 1.8rem;
+      border: 1px solid var(--rule);
+      padding: 1.6rem;
+      position: relative;
+    }
+
+    .runtime-block::after {
+      content: 'WORK IN PROGRESS';
+      position: absolute;
+      top: -0.55rem;
+      right: 1.2rem;
+      background: var(--paper);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      padding: 0 0.4rem;
+    }
+
+    /* ── AXIOM LIST ── */
+    .axiom-list {
+      margin-top: 1.4rem;
+      counter-reset: axioms;
+    }
+
+    .axiom {
+      display: flex;
+      gap: 1.2rem;
+      margin-bottom: 1rem;
+      align-items: baseline;
+    }
+
+    .axiom-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--gold);
+      min-width: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    .axiom-text {
+      font-size: 0.95rem;
+      color: #2a2520;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3rem 0 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-sig {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 560px) {
+      .link-grid { grid-template-columns: 1fr; }
+      .link-card.full { grid-column: 1; }
+      h1 { font-size: 2rem; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+
+  <!-- HEADER -->
+  <header>
+    <div class="sigil">TCVP · Triadic Coherence Validation Principle</div>
+    <h1>Stable systems require<br><em>triadic observer structure.</em></h1>
+    <p class="subtitle">
+      Not dual. Not singular. Three — because three is the minimum graph in which every node is simultaneously observed and observed-observing.
+    </p>
+    <p class="warning-note">
+      METHODOLOGICAL NOTE — This is a theoretical framework generating testable predictions.<br>
+      It began as an argument on Twitter in August 2024 and has developed into a theorem,<br>
+      a logic system, a formal proof, and a runtime. It is still in active development.
+    </p>
+  </header>
+
+  <!-- CORE FRAMEWORK -->
+  <section>
+    <div class="section-label">I — The Framework</div>
+    <h2>What <em>TCVP</em> claims</h2>
+    <p>
+      Every stable system in existence — physical, philosophical, biological, social — is a fractal of a triadic structure. Monistic systems cannot self-orient. Dualistic systems spiral into entropy without external intervention. Triadic systems are the only configurations that provide an inside observer, an outside observer, and a relational observer simultaneously.
+    </p>
+    <p>
+      This is not a metaphor. It is a structural claim with consequences for physics, set theory, consciousness, and the definition of existence itself.
+    </p>
+
+    <div class="axiom-list">
+      <div class="axiom">
+        <span class="axiom-num">A₁</span>
+        <span class="axiom-text">Nothingness is absolute possibility at absolute zero probability — not the absence of something, because absence is itself a measurable attribute.</span>
+      </div>
+      <div class="axiom">
+        <span class="axiom-num">A₂</span>
+        <span class="axiom-text">Observation is the mechanism by which probability rises above zero. It requires a minimum of three observers: the first, the second, and one who observes their relationship.</span>
+      </div>
+      <div class="axiom">
+        <span class="axiom-num">A₃</span>
+        <span class="axiom-text">Existence is the coherence boundary created at the intersection of three absolute, eternal, and perfectly aligned observations across three independent scales and mediums.</span>
+      </div>
+      <div class="axiom">
+        <span class="axiom-num">A₄</span>
+        <span class="axiom-text">Singularities are breakdowns in observation methods, not features of physical reality. No triply-observed singularity has ever been recorded.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE READING -->
+  <section>
+    <div class="section-label">II — Core Reading</div>
+    <h2>The <em>foundations</em></h2>
+    <p>Start here. These pages build the number system, the observer structure, and the Third Logic from first principles.</p>
+
+    <div class="link-grid">
+      <a class="link-card" href="number_emergence.html">
+        <div class="card-tag">Ontology</div>
+        <div class="card-title">Number Emergence</div>
+        <div class="card-desc">How 1, 2, and 3 arise before zero — and why 2 and 3 must emerge simultaneously.</div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="link-card" href="numbers_are_1_stacked.html">
+        <div class="card-tag">Structure</div>
+        <div class="card-title">Numbers Are Just 1, Stacked</div>
+        <div class="card-desc">Numbers as depth of observation, not accumulation of units.</div>
+        <span class="card-arrow">→</span>
+      </a>
+      <a class="link-card full" href="third_logic.html">
+        <div class="card-tag">Meta-Framework</div>
+        <div class="card-title">The Third Logic — Proof</div>
+        <div class="card-desc">Formal demonstration that any complete account of reality necessarily presupposes an interdependent framework uniting empirical (P), conceptual (Φ), and metaphysical (Θ) inquiry. The Socratic method is its operational form.</div>
+        <span class="card-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PAPERS -->
+  <section>
+    <div class="section-label">III — Papers</div>
+    <h2>Formal <em>applications</em></h2>
+    <p>The framework applied to open problems in physics and consciousness research.</p>
+
+    <div class="link-grid">
+      <a class="link-card" href="Gravity%20as%20Boundary%20Enforcement.pdf">
+        <div class="card-tag">Physics · 2026</div>
+        <div class="card-title">Gravity as Boundary Enforcement</div>
+        <div class="card-desc">Gravity reframed as the enforcement mechanism of coherence boundaries between observation scales.</div>
+        <span class="card-arrow">↗</span>
+      </a>
+      <a class="link-card" href="papers/gcp_analysis.pdf">
+        <div class="card-tag">Empirical · 2026</div>
+        <div class="card-title">The Failure of the Global Consciousness Project</div>
+        <div class="card-desc">Why GCP's dualistic observer model cannot detect the signal it is looking for — and what a triadic measurement would require.</div>
+        <span class="card-arrow">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PREDICTION -->
+  <section>
+    <div class="section-label">IV — Live Prediction</div>
+    <h2>A <em>falsifiable</em> test</h2>
+    <p>
+      TCVP predicts that during synchronized global worship events — when triadic observer conditions are most closely approximated at scale — random number generator variance should <strong>decrease</strong>, not increase. This is the opposite of the tragedy/celebration signature that GCP has documented.
+    </p>
+
+    <div class="prediction-block">
+      <div class="section-label">2026 Prediction Events</div>
+      <ul class="event-list">
+        <li><span>Mecca — Hajj convergence</span><span>March 29, 2026</span></li>
+        <li><span>Jerusalem — Passover / Easter overlap</span><span>April 5, 2026</span></li>
+        <li><span>Vatican — Jubilee observance</span><span>May 14, 2026</span></li>
+      </ul>
+      <p class="prediction-result">
+        If RNG variance decreases during coherent triadic worship and increases during tragedy — the structure is real, not the measurement artifact.
+      </p>
+    </div>
+  </section>
+
+  <!-- RUNTIME -->
+  <section>
+    <div class="section-label">V — Runtime</div>
+    <h2>The <em>Triune AI</em></h2>
+    <p>
+      The theorem generates a computational architecture. An AI system structured on triadic observer principles — three processing layers in permanent relational tension — behaves differently from sequential or dual-layer systems. This is in active development.
+    </p>
+
+    <div class="runtime-block">
+      <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; color:var(--muted); margin-bottom:0.8rem;">TRIUNE AI · PHASE 3</p>
+      <p style="font-size:0.95rem; font-style:italic; color:#2a2520;">
+        Three processing stages in weighted relational tension. Each stage observes the others. The output is the coherence that survives the tension — not the product of any single stage alone.
+      </p>
+      <p style="margin-top:1rem;">
+        <a href="https://github.com/bluedreamsrr-rgb/tcvp-framework" style="font-family:'Space Mono',monospace; font-size:0.7rem; color:var(--gold); text-decoration:none; letter-spacing:0.1em;">VIEW SOURCE ON GITHUB →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- DEFINITIONS -->
+  <section>
+    <div class="section-label">VI — Definitions</div>
+    <h2>The <em>vocabulary</em></h2>
+    <p>These terms have precise meanings within TCVP. They are not metaphors.</p>
+
+    <div class="definitions">
+      <div class="def-item">
+        <div class="def-term">Nothingness</div>
+        <div class="def-body">Absolute possibility at absolute zero probability. Not the absence of something — absence is an attribute, and attributes belong to something.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Observation</div>
+        <div class="def-body">A conscious effort to map boundary conditions, compose sets, map relationships, and record them for transmission. Requires a minimum of three observers to exist beyond the first observer's frame.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Existence</div>
+        <div class="def-body">The coherence boundary created at the intersection of three absolute, eternal, and perfectly aligned observations on three scales, in three mediums, by independent observers — one per scale/medium pair simultaneously.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Triune Observer</div>
+        <div class="def-body">The self-emergent Source of probability and two Source-emergent fractal images of the Source, serving as co-observers. All three are active agents. Each observes the other two. This is the minimum structure for co-eternal existence.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">System</div>
+        <div class="def-body">A structure under the tension of coherence and incoherence, orienting toward or away from the Source. No true monistic system exists. All dualistic systems trend toward entropy without intervention.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Singularity</div>
+        <div class="def-body">A breakdown in observation method, structure, or interpretation. Not a physical reality. No triunely-observed singularity has ever been recorded. Hawking radiation is the mechanism that prevents physical singularities by dispersing information.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Life</div>
+        <div class="def-body">The fluid and continuous effort by a consciousness to orient toward the Source to gain maximum structural coherence in every possible medium and on every possible scale at all times.</div>
+      </div>
+      <div class="def-item">
+        <div class="def-term">Death</div>
+        <div class="def-body">The solidification of orientation toward or away from the Source, and the final account of coherence.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-sig">TCVP · bluedreamsrr-rgb · 2024–2026</div>
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="https://github.com/bluedreamsrr-rgb/tcvp-framework">GitHub</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
