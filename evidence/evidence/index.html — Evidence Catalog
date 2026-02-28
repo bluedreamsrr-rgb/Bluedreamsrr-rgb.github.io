@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Catalog — TCVP</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .evidence-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #b8922a;
+        }
+        .evidence-card h3 {
+            margin-top: 0;
+            color: #1a3a5c;
+        }
+        .evidence-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .evidence-card:hover {
+            background: #e8e2d5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Evidence Catalog</h1>
+        <p><em>Domain-by-domain evidence for triadic coherence across all fields of human knowledge.</em></p>
+
+        <div class="evidence-grid">
+            <!-- All links now point to /evidence/evidence/ (correct nested path) -->
+            <div class="evidence-card"><a href="evidence/systems-theory.html"><h3>🔄 Systems Theory</h3><p>Triadic structures in complex systems, feedback loops, and organizational theory.</p></a></div>
+            <div class="evidence-card"><a href="evidence/philosophy-theology.html"><h3>📜 Philosophy & Theology</h3><p>Triune structures in metaphysical systems, religious doctrines, and ethical frameworks.</p></a></div>
+            <div class="evidence-card"><a href="evidence/sports-games.html"><h3>🏀 Sports & Games</h3><p>Triadic patterns in competition, team dynamics, and game theory.</p></a></div>
+            <div class="evidence-card"><a href="evidence/literature-rhetoric.html"><h3>📝 Literature & Rhetoric</h3><p>Triadic structures in narrative, argumentation, and poetic form.</p></a></div>
+            <div class="evidence-card"><a href="evidence/art-architecture.html"><h3>🎨 Art & Architecture</h3><p>Triadic composition in visual arts, design principles, and sacred geometry.</p></a></div>
+            <div class="evidence-card"><a href="evidence/music.html"><h3>🎵 Music</h3><p>Triadic harmony, rhythm structures, and the mathematics of musical intervals.</p></a></div>
+            <div class="evidence-card"><a href="evidence/economics.html"><h3>💰 Economics</h3><p>Triadic patterns in market dynamics, economic cycles, and monetary systems.</p></a></div>
+            <div class="evidence-card"><a href="evidence/computer-science.html"><h3>💻 Computer Science</h3><p>Triadic structures in algorithms, data structures, and computational theory.</p></a></div>
+            <div class="evidence-card"><a href="evidence/medicine.html"><h3>🏥 Medicine</h3><p>Triadic patterns in physiology, disease processes, and healing modalities.</p></a></div>
+            <div class="evidence-card"><a href="evidence/biology.html"><h3>🧬 Biology</h3><p>Triadic structures in genetics, ecosystems, and evolutionary theory.</p></a></div>
+            <div class="evidence-card"><a href="evidence/chemistry.html"><h3>⚗️ Chemistry</h3><p>Triadic patterns in molecular structures, chemical reactions, and periodic trends.</p></a></div>
+            <div class="evidence-card"><a href="evidence/physics.html"><h3>🌌 Physics</h3><p>Triadic structures in quantum mechanics, relativity, and unified field theory.</p></a></div>
+            <div class="evidence-card"><a href="evidence/earth-science.html"><h3>🌍 Earth Science</h3><p>Triadic patterns in geology, meteorology, and planetary systems.</p></a></div>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <a href="../index.html">← Back to home</a> &nbsp;|&nbsp;
+            <a href="../evidence/technical-codex.html">Technical Codex</a> &nbsp;|&nbsp;
+            <a href="../evidence/translation-triune.html">Triune Translation</a>
+        </div>
+    </div>
+</body>
+</html>
